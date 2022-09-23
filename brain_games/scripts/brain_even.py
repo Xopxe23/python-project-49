@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user
+from brain_games.magic_numbers import magic_numbers
 
 
 def main():
     print("Welcome to the Brain Games")
-    welcome_user()
+    magic_numbers()
 
 
 if __name__ == "__main__":
