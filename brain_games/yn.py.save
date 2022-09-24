@@ -1,0 +1,23 @@
+import prompt
+import random
+
+def magic_numbers():
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    count = 0
+    while count < 3:
+	number = random.randint(1,20)
+        print(f'Question: {number}')
+	anser = prompt.string('Your anser: ')
+	if number % 2 == 0:
+	    if anser == 'yes':
+	        print('Correct!')
+	        count += 1
+	    else:
+		print("'no' is wrong answer ;(. Correct answer was 'yes'.")
+		print('Let's try again, Bill!
+	else:
+	    if anser == 'no':
+		print('Correct!')
+		count += 1
