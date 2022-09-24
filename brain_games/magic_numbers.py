@@ -1,5 +1,5 @@
-import prompt
 import random
+import prompt
 
 
 def magic_numbers():
@@ -11,15 +11,16 @@ def magic_numbers():
         number = random.randint(1, 10)
         print(f'Question: {number}')
         answer = prompt.string('Your answer: ')
-        if number % 2 == 0 and answer == 'yes' or number % 2 == 1 and answer == 'no':
+        if number % 2 == 0 and answer == 'yes' or \
+                number % 2 == 1 and answer == 'no':
             print('Correct!')
             count += 1
         elif answer == 'no':
-            print(f"'no' is wrong answer ;(. Correct answer was 'yes'.")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.")
             print(f"Let's try again, {name}!")
             break
         else:
-            print(f"'yes' is wrong answer ;(. Correct answer was 'no'.")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
             print(f"Let's try again, {name}!")
             break
     if count == 3:

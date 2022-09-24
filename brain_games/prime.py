@@ -2,6 +2,14 @@ import prompt
 import random
 
 
+def prime_number(randint):
+    for x in range(2, randint):
+        if randint % x == 0:
+            return False
+    else:
+        return True
+
+
 def prime():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
@@ -9,27 +17,20 @@ def prime():
     count = 0
     while count < 3:
         rand_int = random.randint(2, 100)
-        right_answer = True
-        for x in range(2, rand_int):
-            if rand_int % x == 0:
-                right_answer = False
+        right_answer = prime_number(rand_int)
         print(f"Question: {rand_int}")
-        answer = prompt.string('Your answer: ')
-        if answer == 'yes':
-            if right_answer is True:
-                print('Correct!')
-                count += 1
-            else:
-                print(f"{answer} is wrong answer ;(. Correct answer was 'yes'.")
-                print(f"Let's try again, {name}!")
-                break
-        elif answer == 'no':
-            if right_answer is False:
-                print('Correct!')
-                count += 1
-            else:
-                print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
-                print(f"Let's try again, {name}!")
-                break
+        ans = prompt.string('Your answer: ')
+        if ans == 'yes' and right_answer is True\
+                or ans == 'no' and right_answer is False:
+            print('Correct!')
+            count += 1
+        elif right_answer:
+            print(f"{ans} is wrong answer ;(. Correct answer was 'yes'.")
+            print(f"Let's try again, {name}!")
+            break
+        else:
+            print(f"'{ans}' is wrong answer ;(. Correct answer was 'no'.")
+            print(f"Let's try again, {name}!")
+            break
     if count == 3:
         print(f'Congratulations, {name}!')
