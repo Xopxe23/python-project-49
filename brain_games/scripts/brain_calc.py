@@ -3,7 +3,7 @@ from brain_games.calc import calc
 
 
 def main():
-    print("Welcome to the Brain Games")
+    print("Welcome to the Brain Games!")
     calc()
 
 

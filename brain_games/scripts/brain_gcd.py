@@ -3,7 +3,7 @@ from brain_games.nod import gcd
 
 
 def main():
-    print("Welcome to the Brain Games")
+    print("Welcome to the Brain Games!")
     gcd()
 
 

@@ -3,7 +3,7 @@ from brain_games.prog import prog
 
 
 def main():
-    print("Welcome to the Brain Games")
+    print("Welcome to the Brain Games!")
     prog()
 
 
