@@ -18,6 +18,7 @@ def gcd():
             print('Correct!')
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{math.gcd(number_1, number_2)}'.")
-            break
+            print(f"Let's try again, {name}!")
+	    break
     if count == 3:
         print(f'Congratulations, {name}!')
